@@ -7,6 +7,18 @@ class Connection:
     connection: str
     words: List[str]
 
+    def level_number(self):
+        if self.level == "🟡":
+            return 1
+        elif self.level == "🟢":
+            return 2
+        elif self.level == "🔵":
+            return 3
+        elif self.level == "🟣":
+            return 4
+        return -1
+
+
 @dc.dataclass
 class ConnectionDay:
     date: str
